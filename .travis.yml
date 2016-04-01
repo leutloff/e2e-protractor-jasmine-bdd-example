@@ -24,7 +24,7 @@ node_js:
 
 
 before_script:
-    - ./node_modules/protractor/bin/webdriver-manager start
+    - ./node_modules/protractor/bin/webdriver-manager start &
     #- sudo npm install - is automatically executed when install is missing
     # node app.js is started in postinstall of npm install
     #- node app.js &
