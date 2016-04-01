@@ -57,7 +57,7 @@ env:
 #      _VERSION: "44.0"
     - _BROWSER: "firefox"
       _PLATFORM: "Windows_7"
-      _VERSION: "44.0"
+      _VERSION: "45.0"
 #    - _BROWSER: "chrome"
 #      _PLATFORM: "Windows_7"
 #      _VERSION: "48.0"
