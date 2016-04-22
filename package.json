@@ -9,7 +9,7 @@
     "jasmine",
     "saucelabs"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "Christian Leutloff <leutloff@sundancer.oche.de>",
   "contributors": [],
@@ -22,13 +22,18 @@
     "serve-static": "^1.10.2"
   },
   "devDependencies": {
-    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
     "protractor": "^3.2.2"
   },
   "scripts": {
-    "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "webdriver-manager update",
     "start": "node app.js",
-    "test": "protractor protractor-conf.js"
+    "test": "npm run protractor",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "prestart-webdriver": "npm run update-webdriver",
+    "start-webdriver": "webdriver-manager start",
+    "protractor": "protractor protractor.conf.js"
   },
   "repository": {
     "type": "git",

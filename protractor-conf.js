@@ -3,7 +3,10 @@ exports.config = {
     sauceUser: process.env.SAUCE_USERNAME,
     sauceKey: process.env.SAUCE_ACCESS_KEY,
     
-    seleniumAddress: 'localhost:4445/wd/hub',
+    // port 4444 for local - will be selected automatically
+    //seleniumAddress: 'http://localhost:4444/wd/hub',
+    // port 4445 for remote
+    //seleniumAddress: 'http://localhost:4445/wd/hub',
     
     specs: ['test/spec/*.js'],
     

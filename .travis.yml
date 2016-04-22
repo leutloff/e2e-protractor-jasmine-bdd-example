@@ -24,10 +24,9 @@ node_js:
 
 
 before_script:
-    - ./node_modules/protractor/bin/webdriver-manager start &
+    - sudo npm install protractor -g
+    - npm start-webdriver &
     #- sudo npm install - is automatically executed when install is missing
-    # node app.js is started in postinstall of npm install
-    #- node app.js &
     - npm start &
     # TODO reduce time to wait for starting the express app
     - sleep 5
@@ -56,12 +55,12 @@ env:
 #    - _BROWSER: "firefox"
 #      _PLATFORM: "Linux"
 #      _VERSION: "44.0"
-    - _BROWSER: "firefox"
-      _PLATFORM: "Windows_7"
-      _VERSION: "45.0"
-#    - _BROWSER: "chrome"
+#    - _BROWSER: "firefox"
 #      _PLATFORM: "Windows_7"
-#      _VERSION: "48.0"
+#      _VERSION: "45.0"
+    - _BROWSER: "chrome"
+      _PLATFORM: "Windows_7"
+      _VERSION: "50.0"
 #    - _BROWSER: "internet_explorer"
 #      _PLATFORM: "Windows_7"
 #      _VERSION: "11.0"
