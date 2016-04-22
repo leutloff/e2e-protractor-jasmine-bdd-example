@@ -1,11 +1,11 @@
 
 
 describe('angularjs homepage todo list', function() {
-  var originalTimeout;
-  beforeEach(function() {
-    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;// default is 5000; IE 11 and Egde are requiring more time... 
-  });
+  // var originalTimeout;
+  // beforeEach(function() {
+    // originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    // jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;// default is 5000; IE 11 and Egde are requiring more time... 
+  // });
     
   it('should add a todo', function() {
     browser.get('https://angularjs.org');
@@ -23,8 +23,8 @@ describe('angularjs homepage todo list', function() {
     expect(completedAmount.count()).toEqual(2);
   });
   
-  afterEach(function() {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-  });
+  // afterEach(function() {
+    // jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+  // });
 });
 
