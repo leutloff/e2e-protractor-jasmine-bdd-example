@@ -9,31 +9,17 @@ node_js:
 #    - "5.7"
 #    - "0.12"
 
-#before_install:
-    # download and start selenium server - thought that it is not necessary, but without the website is not available within SauceLabs.
-    # download selenium server - when updating the jar: adapt the SELENIUMVERSION in the test files, too.
-    # Latest version: http://www.seleniumhq.org/download/
-    #- curl -O https://selenium-release.storage.googleapis.com/2.50/selenium-server-standalone-2.50.1.jar
-    # Download and install the chromedriver to be able to execute the browser tests locally
-    # Latest version: https://sites.google.com/a/chromium.org/chromedriver/downloads
-    #- curl https://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip > chromedriver_linux64.zip && unzip chromedriver_linux64.zip && sudo cp chromedriver /usr/local/bin && sudo chmod +rx chromedriver /usr/local/bin/chromedriver
-    # start this before installation to let the server be up and ready without extra waiting time.
-    #- java -jar selenium-server-standalone-2.50.1.jar -Dwebdriver.chrome.driver=./chromedriver &
-    #- sleep 15 works only on Win7/chrome44 and Win7/ie11
-    #- sleep 15
-
-
 before_script:
-    - sudo npm install protractor -g
-    - npm start-webdriver &
     #- sudo npm install - is automatically executed when install is missing
+    # use this when running tests locally - npm run start-webdriver &
     - npm start &
-    # TODO reduce time to wait for starting the express app
+    # wait for starting the express app/selenium server
     - sleep 5
     # check that the web app is running:
     - wget http://localhost:3000/authors || true
     # show the beginning of the file - the whole file is not displayed within TRAVIS (because line is too long?)
     - cat authors | cut -d'/' -f1
+    - cat authors
 
 #script:
 #    #- export TEST_RUN_LOCAL=true && npm test
