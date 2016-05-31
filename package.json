@@ -19,7 +19,7 @@
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
-    "serve-static": "^1.10.2"
+    "serve-static": "^1.10.3"
   },
   "devDependencies": {
     "jasmine-core": "^2.4.1",
