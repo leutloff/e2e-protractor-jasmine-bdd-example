@@ -43,14 +43,11 @@ env:
       _VERSION: "45.0"
     - _BROWSER: "firefox"
       _PLATFORM: "Windows_7"
+      _VERSION: "48.0" 
+      #_VERSION: "49.0" - test-spec fails
       #_VERSION: "50.0" - test-spec fails - interactively Angular JS is failing, too. The expected third item in the TODO list is not appearing. The fourth is appearing (but as third).
-      _VERSION: "49.0"
-    - _BROWSER: "firefox"
-      _PLATFORM: "Windows_7"
-      _VERSION: "beta"
-    - _BROWSER: "firefox"
-      _PLATFORM: "Windows_7"
-      _VERSION: "dev"
+      #_VERSION: "beta" - aka "51.0" test-spec works
+      #_VERSION: "dev" - test-spec works
     - _BROWSER: "chrome"
       _PLATFORM: "Windows_7"
       _VERSION: "54.0"
