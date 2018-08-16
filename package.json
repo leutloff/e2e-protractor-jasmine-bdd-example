@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "jasmine-core": "^2.4.1",
-    "protractor": "^4.0.3"
+    "protractor": "^4.0.14"
   },
   "scripts": {
     "postinstall": "webdriver-manager update",
